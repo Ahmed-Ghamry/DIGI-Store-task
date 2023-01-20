@@ -5,13 +5,21 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomePageComponent } from './components/home-page/home-page.component';
 
 
+// Angular Material Modules
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+
 @NgModule({
   declarations: [
     HomePageComponent
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    MatCardModule,
+    MatButtonModule,
+    MatDividerModule
   ]
 })
 export class HomeModule { }
