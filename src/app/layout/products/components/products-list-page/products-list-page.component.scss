@@ -1,0 +1,23 @@
+@import "src/app/shared/style/shared-style.scss";
+
+:host {
+  .products-list-page {
+    ::ng-deep {
+      .mat-card-image {
+        object-fit: contain !important;
+      }
+      .mat-card-content {
+        height: 120px;
+        .product-details {
+          .title {
+            font-size: 15px;
+            font-weight: 500;
+          }
+          .price {
+            color: #3f51b5;
+          }
+        }
+      }
+    }
+  }
+}

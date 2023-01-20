@@ -1,1 +1,43 @@
-<p>add-product-page works!</p>
+<div class="add-product-page">
+  <div class="add-product-page-container">
+    <div class="add-product-form">
+      <form [formGroup]="createProductForm">
+        <mat-form-field appearance="outline">
+          <mat-label>Product Title</mat-label>
+          <input matInput placeholder="Product Title" formControlName="title">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Product Price</mat-label>
+          <input matInput placeholder="Product Title" type="number" formControlName="price">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Product Description</mat-label>
+          <textarea matInput placeholder="Ex. It makes me feel..." formControlName="description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Product Image URL</mat-label>
+          <input matInput placeholder="Image URL" formControlName="image">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Product Category</mat-label>
+          <mat-select formControlName="category">
+            <mat-option *ngFor="let category of categories" [value]="category">
+              {{category}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+      <div class="add-product-form-actions">
+        <button mat-flat-button color="primary" [disabled]="!createProductForm.valid || submitLoading"
+          (click)="createProduct()">
+          Add Product
+        </button>
+        <button mat-stroked-button color="warn" routerLink="/products">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

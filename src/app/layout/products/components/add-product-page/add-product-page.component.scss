@@ -1,0 +1,9 @@
+.add-product-form {
+  max-width: 450px;
+  .mat-form-field {
+    width: 100%;
+  }
+  .add-product-form-actions button {
+    margin-inline-end: 10px;
+  }
+}

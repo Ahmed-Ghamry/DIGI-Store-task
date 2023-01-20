@@ -4,11 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomePageComponent } from './components/home-page/home-page.component';
 
-
-// Angular Material Modules
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDividerModule } from '@angular/material/divider';
+import { SharedModule } from 'src/app/shared/modules/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,9 +13,7 @@ import { MatDividerModule } from '@angular/material/divider';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MatCardModule,
-    MatButtonModule,
-    MatDividerModule
+    SharedModule
   ]
 })
 export class HomeModule { }
