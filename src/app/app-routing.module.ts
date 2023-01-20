@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: AppComponent },
+  { path: 'home', loadChildren: () => import('./layout/home/home.module').then((m) => m.HomeModule) },
   { path: 'products', loadChildren: () => import('./layout/products/products.module').then((m) => m.ProductsModule) },
   { path: '**', redirectTo: 'home' }
 ];
